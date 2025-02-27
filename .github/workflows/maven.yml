@@ -32,6 +32,6 @@ jobs:
       uses: natercia/academy/.github/actions/maven_build@main
       
     - name: Build Docker Container
-      run: docker build . --file microprofile/workstation-rack-module/src/main/docker/Dockerfile.jvm --tag academy:$(date +%s)
+      run: natercia/academy/.github/actions/docker_build@main
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receiv
