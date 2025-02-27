@@ -1,0 +1,19 @@
+.content{
+    display: flex;
+    flex-shrink: 0;
+    align-content: center;
+
+}
+
+footer{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    bottom:0;
+    color: #cfcfcf;
+    padding-left: 2%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    font-size: smaller;
+    z-index: 3;
+}

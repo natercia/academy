@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div>
+    <article appHighlight>
+        <img src="qr.png" alt="QR code for Rack {{item?.serialNumber}}">
+        <h2>{{item?.serialNumber}}</h2>
+        <div class="Available">
+            @if(item?.status === "AVAILABLE"){
+                <p id="free" class="av">•</p>
+            }
+            @else {<p id="notfree" class="av">•</p>}
+        <p data-test="availability">{{item?.status | lowercase}}</p>
+        </div>
+        <p>{{item?.rackAsset}}</p>
+        <p>{{item?.createdAt | date: 'yyyy/MM/dd hh:mm:ss'}}</p>
+        <div id="btns">
+            @if(item?.status === "AVAILABLE"){
+                <button data-test="book-btn" class="resButton" ds-button (click)="onReserveClick()">Book</button>
+            }
+            @else {<button data-test="book-btn" ds-button variant="outline" class="resButton" (click)="onUnReserveClick()">Remove Booking</button>}
+            
+            <button data-test="rack.delete" id="delButton" ds-button (click)="onDeleteClick()"><i class="fa fa-trash"></i></button>
+        </div>
+        <button data-test="details-btn" ds-button variant="ghost-muted" id="detailsButton" [routerLink]="['/racks/' + item?.id]">View Details</button>
+    </article>
+</div>

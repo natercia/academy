@@ -1,0 +1,48 @@
+main{
+    width: 100%;
+}
+#mainTop{
+    display: flex;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 2%;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+#mainTop > h2{
+    font-size: x-large;
+    font-weight:bold;
+    color: #262626;
+}
+
+#mainTop > a{
+    margin-left: auto;
+    font-weight:bold;
+    color: #262626;
+}
+
+#mainTop > a:hover{
+    margin-left: auto;
+    font-weight:bold;
+    color: #262626;
+    text-decoration: underline;
+}
+
+#racks{
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    align-content: center;
+    padding-right: 4%;
+    margin-top: 2%;
+    margin: 3%;
+}
+
+.smthn{
+    display: flex;
+    align-items: center;
+}

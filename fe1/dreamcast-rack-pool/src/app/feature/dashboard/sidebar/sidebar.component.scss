@@ -1,0 +1,29 @@
+aside > form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formTitle{
+    font-size: smaller;
+    font-weight: bold;
+    color: #666666;
+    padding-top: 7%;
+    align-self: flex-start;
+}
+
+input{
+    border: 1px solid #BBBBBB;
+    padding: 1%;
+    width: 100%;
+}
+
+
+#addNew{
+    width: 20%;
+    color:white;
+    margin-top: 10%;
+    border-radius: 5%;
+    align-self: flex-end;
+
+}

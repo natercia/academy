@@ -1,0 +1,50 @@
+<!--form id="form"  #formId="ngForm" [formGroup]="profileForm" [(ngModel)]="newRack" onSubmit(formId)-->
+<form [formGroup]="form" id="form" data-test="form">
+
+    <label class ="formTitle" for="serial">SERIAL</label><br>
+    <input  id="serial" formControlName="serial" required pattern="PTB\d{5}" required maxlength="8" data-test="form-serial"><br>
+    <div *ngIf="form.get('serial')?.invalid && (form.get('serial')?.dirty || form.get('serial')?.touched)" class="alert">
+        <div *ngIf="form.get('serial')?.hasError('required')">
+            Serial Number is required.
+        </div>
+        <div *ngIf="form.get('serial')?.hasError('pattern')">
+            Serial Number must have the following pattern: PTBXXXX, where X is a digit.
+        </div>
+    </div>
+    <div>
+        Serial Number size is currently {{form.get('serial')?.value | counter:8}}
+    </div>
+    
+    <label class ="formTitle" for="teamid">TEAM ID</label><br>
+    <input type="number" id="teamid" formControlName="teamID" required data-test="form-team"><br>
+    <div *ngIf="form.get('teamID')?.invalid && (form.get('teamID')?.dirty || form.get('teamID')?.touched)" class="alert">
+        <div *ngIf="form.get('teamID')?.hasError('required')">
+            Team ID is required.
+        </div>
+    </div>
+
+    <label class ="formTitle" for="assettag" >ASSET TAG</label><br>
+    <input id="assettag" formControlName="assettag" required pattern="[A-Z0-9]{3}\s[A-Z0-9]{3}\s[A-Z0-9]{4}\s[A-Z0-9]{3}" data-test="form-assettag"><br>
+    <div *ngIf="form.get('assettag')?.invalid && (form.get('assettag')?.dirty || form.get('assettag')?.touched)" class="alert">
+        <div *ngIf="form.get('assettag')?.hasError('required')">
+            Asset Tag is required.
+        </div>
+        <div *ngIf="form.get('assettag')?.hasError('pattern')">
+            Asset Tag must have the following pattern: XXX XXX XXXX XXX, where X is any upper case letter or digit.
+        </div>
+    </div>
+
+    <label class ="formTitle" for="location">DEFAULT LOCATION</label><br>
+    <input id="location" formControlName="location" required pattern="Braga|Porto|Lisboa" data-test="form-location"><br>
+    <div *ngIf="form.get('location')?.invalid && (form.get('location')?.dirty || form.get('location')?.touched)" class="alert">
+        <div *ngIf="form.get('location')?.hasError('required')">
+            Default Location is required.
+        </div>
+        <div *ngIf="form.get('location')?.hasError('pattern')">
+            Default Location must be Braga, Lisboa or Porto.
+        </div>
+    </div>
+            
+    <button data-test="add-btn" [disabled]='!form.valid' (click)="onSubmit()" ds-button id="addNew">Add New</button>
+            <!--button type="button" id="addNew" onclick="closeNav()">Add New</button-->
+</form>

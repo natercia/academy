@@ -1,0 +1,19 @@
+<main>
+    <span id="mainTop">
+        <h2>Racks</h2>
+
+    <a data-test="add-rack" [ds-modal-trigger-for]="tpl" (modalDismiss)="onModalClose($event)">+ Add New Rack</a>
+    </span>
+    <ds-modal #tpl class="smthn">
+        <ds-box-header>Add New Rack</ds-box-header>
+        <ds-box-content><app-sidebar /></ds-box-content>
+      </ds-modal>
+    <div id="racks">
+        @for (rack of racks() | order:'serialNumber'; track rack.id){
+            <app-rack [item]=rack />
+        }@empty {
+            <p>There are no items!<p>
+        }
+    </div>
+</main>
+

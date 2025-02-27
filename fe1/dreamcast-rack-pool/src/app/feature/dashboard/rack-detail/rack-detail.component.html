@@ -1,0 +1,13 @@
+<main>
+<article>
+<h1>Rack {{item().serialNumber}} Details</h1>
+<img src="qr.png" alt="QR code for Rack {{item().serialNumber}}">
+<p data-test="detail-id"><b>Rack ID:</b> {{item().id}}</p>
+<p data-test="team-id"><b>Owning Team's ID:</b> {{item().teamId}} </p>
+<p data-test="status"><b>Status:</b> {{item().status}} </p>
+<p data-test="location"><b>Default Location:</b> {{item().defaultLocation}}</p>
+<p data-test="createdAt"><b>Created at:</b> {{item().createdAt | date: 'yyyy/MM/dd hh:mm:ss'}}</p>
+<p data-test="modifiedAt"><b>Last Modified at:</b> {{item().id | date: 'yyyy/MM/dd hh:mm:ss'}}</p>
+<button data-test="back-btn" ds-button variant="ghost" (click)="backClicked()">Back</button>
+</article>
+</main>
