@@ -35,7 +35,7 @@ jobs:
       uses: natercia/academy/.github/actions/docker_build@main
       with:
         path_dockerfile: microprofile/workstation-rack-module/src/main/docker/Dockerfile.jvm
-        image_name: naterciasoeiro415/academy
+        image_name: academy
         tag_name: v1
 
     - name: Push Docker Image
