@@ -33,5 +33,9 @@ jobs:
       
     - name: Build Docker Container
       uses: natercia/academy/.github/actions/docker_build@main
+      with:
+        path_dockerfile: microprofile/workstation-rack-module/src/main/docker/Dockerfile.jvm
+        image_name: academy
+        tag_name: v1
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receiv
