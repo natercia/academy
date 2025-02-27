@@ -1,10 +1,5 @@
 name: Maven Build 21
 
-inputs:
-  path_dockerfile:
-    desc
-
-
 runs:
   using: "composite"
   steps:
