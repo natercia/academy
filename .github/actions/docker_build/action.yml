@@ -27,11 +27,17 @@ runs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
+
+    - name: Define image name
+      run: echo "DOCKER_IMAGE_NAME=${{ inputs.image_name }}:${{ env.TAG }}" >> $GITHUB_ENV 
+      shell: bash
         
     - name: Build Docker Container
-      run: docker build . --file ${{ inputs.path_dockerfile }} --tag ${{ inputs.image_name }}:${{ env.TAG }}
+      run: docker build . --file ${{ inputs.path_dockerfile }} --tag ${{env.DOCKER_IMAGE_NAME}}
       shell: bash
 
     - name: Verify Docker Images
       run: docker images
       shell: bash
+
+
