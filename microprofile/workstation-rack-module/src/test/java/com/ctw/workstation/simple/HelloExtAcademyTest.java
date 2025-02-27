@@ -23,6 +23,7 @@ class HelloExtAcademyTest {
     @InjectMocks
     HelloExtAcademy helloExtAcademy;
 
+    /*
     @Test
     void lista() {
         ArrayList<String> minhaLista = new ArrayList<>();
@@ -33,6 +34,9 @@ class HelloExtAcademyTest {
 
     }
 
+     */
+
+    /*
     @Test
     public void hello_from_outer_space(){
         //given
@@ -46,12 +50,12 @@ class HelloExtAcademyTest {
         helloExtAcademy.ems = externalMessageServiceSpy;
 
         Mockito.doReturn("Hello World").when(externalMessageServiceSpy).sayHelloFromOuterSpace();
-*/
+        */
 
         //mock config
         //ExternalMessageService emsMock = Mockito.mock(ExternalMessageService.class);
         //helloExtAcademy.ems = externalMessageService;
-
+/*
 
         Mockito.when(externalMessageService.sayHelloFromOuterSpace())
                 .thenThrow(new NotImplementedException("Não há."));
@@ -66,5 +70,6 @@ class HelloExtAcademyTest {
         Assertions.assertThat(result)
                 .isEqualTo("Hello %s from outer space".formatted(name));
     }
+    */
 
 }

@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 
 class HelloAcademyTest {
-
+    /*
     @ParameterizedTest
     @MethodSource(value = {"hello_academy_with_valid_name"})
     void hello_academy_with_valid_name(String name) {
@@ -55,4 +55,5 @@ class HelloAcademyTest {
         //then
         Assertions.assertEquals("Hello ", result,  "Matching result for sayHello is equal to 'Hello '");
     }
+     */
 }

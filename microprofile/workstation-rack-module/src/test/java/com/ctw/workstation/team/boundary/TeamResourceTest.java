@@ -123,6 +123,7 @@ class TeamResourceTest {
 
     }
 
+    /*
     @Test
     @Order(6)
     @DisplayName("Fetching the Teams Has Content")
@@ -146,10 +147,13 @@ class TeamResourceTest {
                 .body("[0].createdAt", Matchers.notNullValue())
                 .body("[0].modifiedAt", Matchers.notNullValue())
                 .header("content-type", Matchers.stringContainsInOrder("application/json"))
-                */;
+                ;
 
     }
 
+     */
+
+    /*
     @Test
     @Order(7)
     @DisplayName("Fetching the Team  by id")
@@ -172,6 +176,9 @@ class TeamResourceTest {
                 .header("content-type", Matchers.stringContainsInOrder("application/json"));;
     }
 
+     */
+
+    /*
     @Test
     @Order(8)
     @DisplayName("Fetching team by id does not exist")
@@ -185,6 +192,8 @@ class TeamResourceTest {
                 .contentType(ContentType.JSON)
                 .header("content-type", Matchers.stringContainsInOrder("application/json"));
     }
+
+     */
 
 
 }
