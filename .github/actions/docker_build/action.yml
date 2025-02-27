@@ -15,3 +15,7 @@ runs:
     - name: Build Docker Container
       run: docker build . --file microprofile/workstation-rack-module/src/main/docker/Dockerfile.jvm --tag academy:$(date +%s)
       shell: bash
+
+    - name: Verify Docker Images
+      run: docker images
+      shell: bash
